@@ -1,0 +1,203 @@
+@font-face {
+    font-family: Montserrat-Black;
+    src: url(../fonts/Montserrat/Montserrat-Black.ttf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../fonts/Montserrat/Montserrat-Light.ttf);
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+.doubts-accordion__title {
+    font-family: Montserrat-Bold;
+    color: #a141eb;
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    background: linear-gradient(180deg,
+        rgba(0,0,0,0) calc(50% - 1px), 
+        rgba(231,231,231,1) calc(50%),
+        rgba(0,0,0,0) calc(50% + 1px)
+    );
+}
+.doubts-accordion__title::after {
+    content: '';
+    width: 30px;
+    height: 18px;
+    background: url(../icons/seta.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+}
+.doubts-accordion__title.active::after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.doubts-accordion__description {
+    overflow:hidden;
+    transition:max-height 0.5s ease-in-out;
+    height:auto;
+    max-height:600px;
+    font-family: Montserrat-Light;
+    font-size: 13px;
+}
+.doubts-accordion__description.collapsed {
+    max-height:0;
+}
+.doubts-header {
+    width: 100%;
+    height: 400px;
+    background: url(../img/header.png);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    position: relative;
+}
+.doubts-header__navbar {
+    background: #a141eb;
+    width: 60%;
+    padding: 18px;
+    border-bottom-right-radius: 25px;
+}
+.doubts-header button:hover{
+    opacity: 0.9;
+}
+.doubts-header button:focus{
+    outline: 0;
+}
+.doubts-header button{
+    font-family: Montserrat-Regular;
+    cursor: pointer;
+}
+.doubts-header__franchisee-button {
+    background: #e1a607;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.doubts-header__franchisee-button::before {
+    content: '';
+    width: 18px;
+    height: 14px;
+    background: url(../icons/editar.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-right: 5px;
+}
+.doubts-header__consultant-button {
+    background: #7928b7;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.doubts-header__consultant-button::before {
+    content: '';
+    width: 18px;
+    height: 14px;
+    background: url(../icons/seja_consultor.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-right: 5px;
+}
+.doubts-header__buy-button {
+    font-family: Montserrat-Bold;
+    font-weight: bold;
+    background: #0eb7d8;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.doubts-header__restricted-area-button{
+    background: #e1a607;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    padding: 15px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 100px;
+    top:0px;
+}
+.doubts-header__restricted-area-button:before{
+    content: '';
+    width: 18px;
+    height: 14px;
+    background: url(../icons/area_restrita.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-right: 5px;
+}
+.doubts-header h1 {
+    font-family: Montserrat-Black;
+    color: #e1a607;
+}
+.doubts-header p {
+    font-family: Montserrat-Regular;
+}
+.doubts-header p a {
+    font-family: Montserrat-Black;
+    color: #a64bec;
+}
+.doubts-header__doubts-text {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.doubts-accordion {
+    margin-top: 50px;
+    width: 90vw;
+    margin-left: 5vw;
+}
+.doubts-navbar-bottom {
+    background: #a141eb;
+    width: 100vw;
+    height: 50px;
+}
+@media screen and (max-width: 600px) {
+    .doubts-accordion__title {
+        font-size: 14px;
+        background: none;
+    }
+}
+@media screen and (max-width: 470px) {
+    .doubts-accordion__title {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1010px) {
+    .doubts-header__navbar button {
+      width: 100%;
+      margin-top: 5px;
+    }
+    .doubts-header__restricted-area-button {
+        right: 10px;
+    }
+}
